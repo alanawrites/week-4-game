@@ -10,7 +10,7 @@ $( document ).ready(function() {
     numbers.push(Math.round(Math.random() * 11) + 1);
     }
     var newNumber =(numbers);
-    console.log(numbers);
+    // console.log(numbers);
     
     var wins = 0;
 
@@ -24,6 +24,7 @@ $( document ).ready(function() {
    			numbers = [];
     for (var i = 0, l = 4; i < l; i++) {
     numbers.push(Math.round(Math.random() * 11) + 1);
+    		counter = 0;
     };
    			numberToGuess = Math.floor((Math.random() * 101) + 19);
      		$("#number").html(numberToGuess);
@@ -70,17 +71,18 @@ $( document ).ready(function() {
         
       }
           var score =
-          "wins: " + 
-          wins +
-          "" +
-          "losses: " + 
-          losses + 
-          "" ;
+          "<p>wins: " + 
+		wins + 
+		"</p>" +
+		"<p>losses: " + 
+		losses + 
+		"</p>" ;
           $('#score').html(score)
     });
 
     // create a funtion that calls numberToGuess and newNumber    $('#score').html(score);
 
   });
+
 
 
