@@ -1,10 +1,22 @@
-$( document ).ready(function() {
-
-    var numberToGuess = 53;
 
     var counter = 0;
 
     var numbers = [10, 5, 3, 7];
+
+    var wins = 0;
+
+    var losses = 0;
+
+    var score;
+
+
+$( document ).ready(function() {
+
+    var numberToGuess =  Math.floor((Math.random() * 101) + 19);
+    document.getElementById("numberToGuess");
+    
+  
+
 
     $('#number').text(numberToGuess);
 
@@ -30,10 +42,26 @@ $( document ).ready(function() {
       $('#yourNumber').text(counter);
 
       if (counter == numberToGuess){
+        wins++;
         alert('heigh ho!!!!');
+        
       }else if( counter > numberToGuess){
+        losses++;
         alert('You lost!');
+        
       }
     });
 
   });
+
+var score =
+    "<p>wins: " + 
+    wins + 
+    "</p>" +
+    "<p>losses: " + 
+    losses + 
+    "</p>" ;
+console.log(score)
+
+$('#score').html(score);
+
