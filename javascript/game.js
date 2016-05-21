@@ -1,4 +1,8 @@
 
+
+$( document ).ready(function() {
+
+
     var counter = 0;
 
     var numbers = [];
@@ -12,16 +16,10 @@
 
     var losses = 0;
 
-    
-
-
-$( document ).ready(function() {
-
     var numberToGuess =  Math.floor((Math.random() * 101) + 19);
     document.getElementById("numberToGuess");
     
-  
-
+   
 
     $('#number').text(numberToGuess);
 
@@ -47,30 +45,31 @@ $( document ).ready(function() {
       $('#yourNumber').text(counter);
 
       if (counter == numberToGuess){
-        wins++;
+        wins++,
         /*reset numberToGuess here
         reset var numbers here */
         alert('heigh ho!!!!');
         
       }else if( counter > numberToGuess){
-        losses++;
+        losses++,
         /*reset numberToGuess here
         reset var numbers here */
         alert('You lost!');
+        console.log(losses)
         
       }
+          var score =
+          "wins: " + 
+          wins +
+          "" +
+          "losses: " + 
+          losses + 
+          "" ;
+          $('#score').html(score)
     });
+
+    // create a funtion that calls numberToGuess and newNumber    $('#score').html(score);
 
   });
 
-var score =
-    "<p>wins: " + 
-    wins + 
-    "</p>" +
-    "<p>losses: " + 
-    losses + 
-    "</p>" ;
-console.log(score)
-
-$('#score').html(score);
 
