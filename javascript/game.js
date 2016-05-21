@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
     var numbers = [];
     for (var i = 0, l = 4; i < l; i++) {
-    numbers.push(Math.round(Math.random() * 12) + 1);
+    numbers.push(Math.round(Math.random() * 11) + 1);
     }
     var newNumber =(numbers);
     console.log(numbers);
@@ -19,7 +19,17 @@ $( document ).ready(function() {
     var numberToGuess =  Math.floor((Math.random() * 101) + 19);
     document.getElementById("numberToGuess");
     
-   
+   function reset () {
+   			$('#yourNumber').html("0");
+   			numbers = [];
+    for (var i = 0, l = 4; i < l; i++) {
+    numbers.push(Math.round(Math.random() * 11) + 1);
+    };
+   			numberToGuess = Math.floor((Math.random() * 101) + 19);
+     		$("#number").html(numberToGuess);
+     console.log (numbers, numberToGuess)
+
+	}
 
     $('#number').text(numberToGuess);
 
@@ -49,13 +59,14 @@ $( document ).ready(function() {
         /*reset numberToGuess here
         reset var numbers here */
         alert('heigh ho!!!!');
+        reset();
         
       }else if( counter > numberToGuess){
         losses++,
         /*reset numberToGuess here
         reset var numbers here */
         alert('You lost!');
-        console.log(losses)
+        reset ();
         
       }
           var score =
