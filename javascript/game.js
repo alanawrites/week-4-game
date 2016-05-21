@@ -12,7 +12,7 @@
 
     var losses = 0;
 
-    var score;
+    
 
 
 $( document ).ready(function() {
