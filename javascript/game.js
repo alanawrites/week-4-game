@@ -1,8 +1,13 @@
 
     var counter = 0;
 
-    var numbers = [10, 5, 3, 7];
-
+    var numbers = [];
+    for (var i = 0, l = 4; i < l; i++) {
+    numbers.push(Math.round(Math.random() * 12) + 1);
+    }
+    var newNumber =(numbers);
+    console.log(numbers);
+    
     var wins = 0;
 
     var losses = 0;
@@ -43,10 +48,14 @@ $( document ).ready(function() {
 
       if (counter == numberToGuess){
         wins++;
+        /*reset numberToGuess here
+        reset var numbers here */
         alert('heigh ho!!!!');
         
       }else if( counter > numberToGuess){
         losses++;
+        /*reset numberToGuess here
+        reset var numbers here */
         alert('You lost!');
         
       }
