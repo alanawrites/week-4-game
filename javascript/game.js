@@ -41,7 +41,7 @@ $( document ).ready(function() {
       imageCrystal.attr('data-num', numbers[i]);
 
       imageCrystal.attr('src', 
-        'http://pngimg.com/upload/diamond_PNG6692.png');
+        'http://pngimg.com/uploads/diamond/diamond_PNG6692.png');
 
       imageCrystal.attr('alt', 'crystals');
 
